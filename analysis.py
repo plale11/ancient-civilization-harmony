@@ -1,3 +1,15 @@
+def analyze_environment(df):
+    print("\n=== Environment Types ===")
+    environment_counts = df["environment_type"].value_counts()
+    print(environment_counts)
+
+    print("\nInterpretation:")
+    print(
+        "Environmental conditions such as river valleys, floodplains, and predictable "
+        "flooding created the foundation for stable settlement and food production."
+    )
+
+
 def analyze_settlement(df):
     print("\n=== Settlement Types ===")
     settlement_counts = df["settlement_type"].value_counts()
@@ -12,52 +24,61 @@ def analyze_settlement(df):
 
 def analyze_food_system(df):
     print("\n=== Food Sources ===")
-    food_source_counts = df["food_source"].value_counts()
-    print(food_source_counts)
+    print(df["food_source"].value_counts())
 
     print("\n=== Food Storage Systems ===")
-    food_storage_counts = df["food_storage"].value_counts()
-    print(food_storage_counts)
+    print(df["food_storage"].value_counts())
 
     print("\n=== Irrigation Systems ===")
-    irrigation_counts = df["irrigation"].value_counts()
-    print(irrigation_counts)
+    print(df["irrigation"].value_counts())
+
+    print("\n=== Agriculture Systems ===")
+    print(df["agriculture"].value_counts())
 
     print("\nInterpretation:")
     print(
-        "Food production, storage, and irrigation reveal how early civilizations "
-        "moved beyond simple subsistence and developed stable agricultural systems."
+        "Food production, storage, irrigation, and agriculture reveal how early "
+        "civilizations moved beyond subsistence and developed stability."
     )
 
 
 def analyze_community(df):
     print("\n=== Community Structures ===")
-    community_counts = df["community_structure"].value_counts()
-    print(community_counts)
+    print(df["community_structure"].value_counts())
 
     print("\n=== Labor Division ===")
-    labor_counts = df["labor_division"].value_counts()
-    print(labor_counts)
+    print(df["labor_division"].value_counts())
+
+    print("\n=== Political Structure ===")
+    print(df["political_structure"].value_counts())
 
     print("\nInterpretation:")
     print(
-        "Community structure and labor division suggest increasing social complexity, "
-        "cooperation, and organization in early civilizations."
+        "Community structure, labor division, and political systems suggest increasing "
+        "social complexity, cooperation, and organization."
     )
 
 
 def run_all_analysis(df):
-    print("\n==============================")
-    print(" Ancient Civilization Analysis ")
-    print("==============================")
+    print("\n======================================")
+    print(" Ancient Civilization Harmony Analysis ")
+    print("======================================")
 
+    analyze_environment(df)
     analyze_settlement(df)
     analyze_food_system(df)
     analyze_community(df)
 
+    print("\n=== Pipeline Insight ===")
+    print(
+        "Environment influenced food systems; food systems supported permanent settlement; "
+        "permanent settlement encouraged more complex communities, labor specialization, "
+        "and political organization."
+    )
+
     print("\n=== Overall Insight ===")
     print(
         "The dataset suggests that early river civilizations developed through a process "
-        "of permanent settlement, agricultural production, food surplus storage, "
-        "and increasingly organized community life."
+        "of environmental adaptation, agricultural production, surplus storage, permanent "
+        "settlement, and increasingly organized social life."
     )
